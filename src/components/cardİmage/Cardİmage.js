@@ -1,9 +1,9 @@
 import React from "react";
 import "./Cardİmage.css";
-function Cardİmage() {
+function Cardİmage({ image }) {
   return (
     <div className="card-image">
-      <img src="https://picsum.photos/id/0/5000/3333" alt="" />
+      <img src={image} alt="" />
     </div>
   );
 }

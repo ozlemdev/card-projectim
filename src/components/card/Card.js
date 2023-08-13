@@ -3,13 +3,13 @@ import Cardİnfo from "../cardinfo/Cardİnfo";
 import CardImage from "../cardİmage/Cardİmage";
 import CardTitle from "../cardTitle/CardTitle";
 import "./card.css";
-function Card() {
+function Card({ title, image, info }) {
   return (
     <div className="card">
       <div className="card-body">
-        <CardTitle />
-        <CardImage />
-        <Cardİnfo />
+        <CardTitle title={title} />
+        <CardImage image={image} />
+        <Cardİnfo info={info} />
       </div>
     </div>
   );
