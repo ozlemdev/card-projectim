@@ -47,8 +47,23 @@ function App() {
           return (
             <Card
               onClick={() => {
-                const arr = [...basket, eleman];
-                //arr.push(eleman);
+                const arr = [...basket];
+                if (
+                  arr.findIndex((ind) => {
+                    return eleman.id === ind.id;
+                  }) === -1
+                ) {
+                  arr.push(eleman);
+                  setBasket(arr);
+                } else {
+                  arr.map((item) => {
+                    if (item.id === eleman.id) {
+                      return (eleman.adet += 1);
+                    }
+                    setBasket(arr);
+                  });
+                }
+                arr.push(eleman);
                 setBasket(arr);
                 console.log(basket);
               }}
