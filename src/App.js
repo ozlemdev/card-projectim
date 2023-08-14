@@ -14,14 +14,14 @@ function App() {
     {
       id: 2,
       title: "Ekran Kartı",
-      image: "ttps://picsum.photos/id/1/5000/3333",
+      image: "https://picsum.photos/id/28/4928/3264",
       info: "16GB Kingston",
       adet: 1,
     },
     {
       id: 3,
       title: "RAM",
-      image: "https://picsum.photos/id/2/5000/3333",
+      image: "https://picsum.photos/id/12/2500/1667",
       info: "Nvdia Geforce 1050",
       adet: 1,
     },
@@ -37,22 +37,28 @@ function App() {
   // const title = "RAM";
   // const info = "16 GB 3600Mhz";
   //const image = "https://picsum.photos/id/2/5000/3333";
+  const [basket, setBasket] = useState([]);
   return (
     <div className="App">
       <h1>REACT SEPET UYGULAMASI</h1>
       <h2>Listelenen Ürünler</h2>
       <div className="urunler">
-        {product.map((eleman) => {
+        {product.map((eleman, index) => {
           return (
             <Card
+              onClick={() => {
+                const arr = [...basket, eleman];
+                //arr.push(eleman);
+                setBasket(arr);
+                console.log(basket);
+              }}
+              key={index}
               title={eleman.title}
               image={eleman.image}
               info={eleman.info}
             />
           );
         })}
-
-        <Card title={title} info={info} image={image} />
       </div>
     </div>
   );
