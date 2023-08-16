@@ -63,8 +63,8 @@ function App() {
                     setBasket(arr);
                   });
                 }
-                arr.push(eleman);
-                setBasket(arr);
+                //arr.push(eleman);
+                //setBasket(arr);
                 console.log(basket);
               }}
               key={index}
