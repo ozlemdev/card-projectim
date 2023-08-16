@@ -89,6 +89,17 @@ function App() {
             );
           })}
         </ul>
+        {basket.length > 0 ? (
+          <button
+            onClick={() => {
+              setBasket([]);
+            }}
+          >
+            Sepeti Temizle
+          </button>
+        ) : (
+          <h2>Sepetinizde Ürün Bulunmamaktadır.</h2>
+        )}
       </div>
     </div>
   );
