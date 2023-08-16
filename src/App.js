@@ -75,6 +75,21 @@ function App() {
           );
         })}
       </div>
+      <div className="sepet">
+        <h2>SEPETİMİZ</h2>
+        <ul className="sepet">
+          {basket.map((eleman, index) => {
+            return (
+              <li>
+                {eleman.title + "- - - - >" + eleman.info + "Adet:"}{" "}
+                <b style={{ fontSize: "24px", color: "yellow" }}>
+                  {eleman.adet}{" "}
+                </b>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }

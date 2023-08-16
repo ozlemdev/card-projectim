@@ -10,3 +10,16 @@
   width: 100%;
   justify-content: space-evenly;
 }
+body {
+  background-color: #c94b4b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4b134f,
+    #c94b4b
+  ); /*chrome 10-25, safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4b134f,
+    #c94b4b
+  ); /*W3C, IE 10+/ Edge, Frefox 16+,Crome 26 +,Opera 12+, Safari 7+ */
+}
